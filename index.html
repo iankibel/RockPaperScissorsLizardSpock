@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors, Lizard, Spock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
+        <p>with HTML, CSS & JavaScript</p>
+    </header>
+    <main>
+        <div id="start-rules" class="start-rules">
+            <h3 class="rules-title" id="rules-title">Instructions</h3>
+            <div class="start-rules-details">
+                <p class="rules" id="rules">
+                    Scissors cuts paper.<br>
+                    Paper covers rock.<br>
+                    Rock crushes lizard.<br>
+                    Lizard poisons Spock.<br>
+                    Spock smashes scissors.<br>
+                    Scissors decapitates lizard.<br>
+                    Lizard eats paper.<br>
+                    Paper disproves Spock.<br>
+                    Spock vaporizes rock.<br>
+                    (and as it always has)<br>
+                    Rock crushes scissors.
+                </p>
+                <img class="graph" id="graph" src="./assets/RPSLS-graph.png" alt="">
+            </div>
+        </div>
+        <button class="btn-start" id="btn-start">Start Game</button>
+
+        <p class="instrucciones disabled" id="instrucciones">
+            First to score 5, wins
+        </p>
+        <div id="marcador" class="marcador disabled">
+            <p class="nombre nombre-jugador">Player</p>
+            <p class="nombre nombre-computadora">Computer</p>
+            <p class="puntos">
+                <span id="puntos-usuario">0</span>
+                <span>-</span>
+                <span id="puntos-computadora">0</span>
+            </p>
+        </div>
+        <div class="elegi-tu-arma disabled" id="elegi-tu-arma">
+            <h2>Take your pick</h2>
+            <div class="armas">
+                <button class="arma" id="rock"><img src="./assets/rock.png"/></button>
+                <button class="arma" id="paper"><img src="./assets/paper.png"/></button>
+                <button class="arma" id="scissors"><img src="./assets/scissors.png"/></button>
+                <button class="arma" id="lizard"><img src="./assets/lizard.png"/></button>
+                <button class="arma" id="spock"><img src="./assets/spock.png"/></button>
+            </div>
+        </div>
+        <div class="mensaje disabled" id="mensaje">
+            <p>
+                You chose <span class="eleccion" id="eleccion-usuario">paper</span><br>
+                and the computer chose <span class="eleccion" id="eleccion-computadora">scissors</span>
+            </p>
+            <p id="gana-punto">¡You scored!</p>
+        </div>
+        <button class="btn disabled" id="reiniciar">Restart game</button>
+        <button class="btn-modal disabled" id="btn-modal"><span>Help</span></button>
+        <div class="modal-right" id="modal-right">
+            <img class="graph2" id="graph2" src="./assets/RPSLS-graph.png" alt="">
+            <button class="btn-close" id="btn-close">Close</button>
+        </div>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+
+</html>

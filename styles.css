@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Prompt&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+:root {
+    --clr-blue: #357a93;
+    --clr-light-blue: #B7DCF8;
+    --clr-red: #363636;
+}
+
+body {
+    background-color: var(--clr-red);
+    color: var(--clr-light-blue);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--clr-light-blue);
+    color: var(--clr-red);
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    font-size: 1.9rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.rules-title {
+    font-size: 2.2rem;
+}
+
+.start-rules {
+    background-color: #3E7DAD;
+    border-radius: 2rem;
+    padding: 1rem 1rem;
+    width: 1000px;
+    margin-bottom: 2rem;
+    /* font-size: 1rem; */
+}
+
+.start-rules-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.8rem;
+}
+
+.graph {
+    width: 500px;
+    margin-bottom: 1rem;
+}
+
+.btn-start {
+    border: 0;
+    line-height: 1;
+    background-color: var(--clr-light-blue);
+    color: var(--clr-red);
+    font-size: 2rem;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.instrucciones {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.marcador {
+    background-color: var(--clr-blue);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--clr-red);
+    font-weight: 600;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+}
+
+.marcador .nombre {
+    position: absolute;
+    color: var(--clr-light-blue);
+    background-color: var(--clr-red);
+    line-height: 1;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 2px solid var(--clr-blue);
+}
+
+.marcador .nombre-jugador {
+    right: 85%;
+}
+
+.marcador .nombre-computadora {
+    left: 85%;
+}
+
+.marcador .puntos {
+    font-size: 2.4rem;
+}
+
+.elegi-tu-arma {
+    margin-bottom: 2rem;
+}
+
+.elegi-tu-arma h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.armas {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.arma img {
+    width: 80px;
+}
+
+#paper img {
+    height: 80px;
+}
+
+.arma {
+    font-size: 3rem;
+    background-color: var(--clr-light-blue);
+    border: 0;
+    width: 100px;
+    height: 100px;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.mensaje {
+    margin-bottom: 6rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.mensaje p {
+    margin-bottom: 1rem;
+}
+
+.mensaje .eleccion {
+    color: var(--clr-red);
+    background-color: var(--clr-blue);
+    border-radius: .25rem;
+    padding-inline: .25rem;
+}
+
+.btn {
+    border: 0;
+    line-height: 1;
+    background-color: var(--clr-light-blue);
+    color: var(--clr-red);
+    font-size: 2rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.disabled {
+    display: none;
+}
+
+.btn-modal {
+    position: fixed;
+    top: 400px;
+    right: -10px;
+    border: 0;
+    /* display: inline-block; */
+    transform: rotate(90deg);
+    background-color: var(--clr-blue);
+    color: var(--clr-light-blue);
+    padding: .75rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: .75rem;
+}
+
+.modal-right {
+    position: fixed;
+    right: 0;
+    width: 20%;
+    background-color: var(--clr-blue);
+    color: var(--clr-light-blue);
+    padding: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: .5s;
+}
+
+.modal-right.active {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-close {
+    border: 0;
+    background-color: var(--clr-blue);
+    color: var(--clr-light-blue);
+    padding: .75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: .75rem;
+}
